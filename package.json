@@ -1,5 +1,5 @@
 {
-  "name": "comp397-w2018-mailpilotdemo-b",
+  "name": "comp397-w2018-mailpilotdemo-g",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CentennialCollege/COMP397-W2018-MailPilotDemo-B.git"
+    "url": "git+https://github.com/CentennialCollege/COMP397-W2018-MailPilotDemo-G.git"
   },
   "author": "Tom Tsiliopoulos <tsiliopoulos@hotmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CentennialCollege/COMP397-W2018-MailPilotDemo-B/issues"
+    "url": "https://github.com/CentennialCollege/COMP397-W2018-MailPilotDemo-G/issues"
   },
   "homepage": "https://github.com/CentennialCollege/COMP397-W2018-MailPilotDemo-B#readme",
   "devDependencies": {
