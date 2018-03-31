@@ -25,21 +25,21 @@ var objects;
         Bullet.prototype.Start = function () {
             this._dy = -10;
             this._dx = 0;
+            this.x = managers.Game.plane.BulletSpawn.x;
+            this.y = managers.Game.plane.BulletSpawn.y;
             this.Reset();
-            this.Update();
         };
         Bullet.prototype.Update = function () {
             this.Move();
             this.CheckBounds();
         };
         Bullet.prototype.Reset = function () {
+            this.x = -5000;
+            this.y = -5000;
         };
         Bullet.prototype.CheckBounds = function () {
             if (this.y <= -this.height) {
                 this.Reset();
-            }
-            else {
-                this.Update();
             }
         };
         Bullet.prototype.Move = function () {

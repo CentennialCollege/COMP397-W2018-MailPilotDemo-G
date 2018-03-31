@@ -16,8 +16,9 @@ module objects {
     public Start(): void {
       this._dy = -10;
       this._dx = 0;
+      this.x = managers.Game.plane.BulletSpawn.x;
+      this.y = managers.Game.plane.BulletSpawn.y;
       this.Reset();
-      this.Update();
     }
 
     public Update(): void {
@@ -26,15 +27,13 @@ module objects {
     }
 
     public Reset():void {
-
+      this.x = -5000;
+      this.y = -5000;
     }
 
     public CheckBounds():void {
       if(this.y <= -this.height) {
         this.Reset();
-      }
-      else {
-        this.Update();
       }
     }
 

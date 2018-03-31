@@ -7,6 +7,7 @@ module scenes {
     private _clouds: objects.Cloud[];
     private _cloudNum: number;
     private _scoreBoard: managers.ScoreBoard;
+    private _bulletManager: managers.Bullet;
 
     private _engineSound: createjs.AbstractSoundInstance;
     private _coin: objects.Coin;
@@ -31,6 +32,10 @@ module scenes {
       this._ocean = new objects.Ocean();
       this._plane = new objects.Plane();
       managers.Game.plane = this._plane;
+
+       // add bullets to the scene - above the plane
+       this._bulletManager = new managers.Bullet();
+       managers.Game.BulletManager = this._bulletManager;
 
       this._coin = new objects.Coin();
       this._island = new objects.Island();
@@ -60,6 +65,7 @@ module scenes {
 
       this._ocean.Update();
       this._plane.Update();
+      this._bulletManager.Update();
 
       this._coin.x = this._island.x;
       this._coin.y = this._island.y;
@@ -98,6 +104,10 @@ module scenes {
       // add the plane to the scene
       this.addChild(this._plane);
       this.addChild(this._plane.planeFlash); // add the plane flashing effect
+
+      this._bulletManager.Bullets.forEach(bullet => {
+        this.addChild(bullet);
+      });
 
       // add clouds to the scene
 
