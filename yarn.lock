@@ -26,6 +26,10 @@
     "@types/createjs-lib" "*"
     "@types/preloadjs" "*"
 
+"@types/stats.js@^0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@types/stats.js/-/stats.js-0.17.0.tgz#0ed81d48e03b590c24da85540c1d952077a9fe20"
+
 "@types/tweenjs@*", "@types/tweenjs@^0.6.27":
   version "0.6.27"
   resolved "https://registry.yarnpkg.com/@types/tweenjs/-/tweenjs-0.6.27.tgz#8dd8acc7f4abee8f92b7692bae76d9ce8f1dd607"
@@ -43,6 +47,10 @@ preloadjs@^1.0.1:
 soundjs@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/soundjs/-/soundjs-1.0.1.tgz#99970542d28d0df2a1ebd061ae75c961a98c8180"
+
+stats.js@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/stats.js/-/stats.js-0.17.0.tgz#b1c3dc46d94498b578b7fd3985b81ace7131cc7d"
 
 tweenjs@^1.0.2:
   version "1.0.2"

@@ -37,7 +37,7 @@ module scenes {
 
       // instantiate the cloud array
       this._clouds = new Array<objects.Cloud>();
-      this._cloudNum = 3;
+      this._cloudNum = 0;
       // loop and add each cloud to the array
       for (let count = 0; count < this._cloudNum; count++) {
         this._clouds[count] = new objects.Cloud();
@@ -56,6 +56,8 @@ module scenes {
 
     // triggered every frame
     public Update(): void {
+      console.info("Num Objects: " + this.numChildren);
+
       this._ocean.Update();
       this._plane.Update();
 

@@ -1,7 +1,7 @@
 module objects {
   export class Plane extends objects.GameObject {
     // private instance variables
-
+    private _bulletSpawn: math.Vec2;
 
     // public properties
     public planeFlash: objects.PlaneFlash;
@@ -30,11 +30,14 @@ module objects {
 
       this.x = 320;
       this.y = 430;
+
+      this._bulletSpawn = new math.Vec2(this.x, this.y - 2);
     }
 
     // updates the game object every frame
     public Update():void {
       this.Move();
+      this.BulletFire();
       this.CheckBounds();
     }
 
@@ -59,6 +62,20 @@ module objects {
 
      this.planeFlash.x = this.x;
      this.planeFlash.y = this.y;
+
+    }
+
+    public BulletFire():void {
+
+      this._bulletSpawn = new math.Vec2(this.x, this.y - 2);
+      if(this.alpha == 1) {
+        if(managers.Game.keyboardManager.fire) {
+          let bullet = new objects.Bullet();
+          bullet.x = this._bulletSpawn.x;
+          bullet.y = this._bulletSpawn.y;
+          managers.Game.currentSceneObject.addChild(bullet);
+        }
+      }
 
     }
 

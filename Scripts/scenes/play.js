@@ -30,7 +30,7 @@ var scenes;
             this._island = new objects.Island();
             // instantiate the cloud array
             this._clouds = new Array();
-            this._cloudNum = 3;
+            this._cloudNum = 0;
             // loop and add each cloud to the array
             for (var count = 0; count < this._cloudNum; count++) {
                 this._clouds[count] = new objects.Cloud();
@@ -46,6 +46,7 @@ var scenes;
         // triggered every frame
         PlayScene.prototype.Update = function () {
             var _this = this;
+            console.info("Num Objects: " + this.numChildren);
             this._ocean.Update();
             this._plane.Update();
             this._coin.x = this._island.x;

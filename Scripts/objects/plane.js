@@ -33,10 +33,12 @@ var objects;
             this.planeFlash.on("animationend", this._animationEnded.bind(this), false);
             this.x = 320;
             this.y = 430;
+            this._bulletSpawn = new math.Vec2(this.x, this.y - 2);
         };
         // updates the game object every frame
         Plane.prototype.Update = function () {
             this.Move();
+            this.BulletFire();
             this.CheckBounds();
         };
         // reset the objects location to some value
@@ -55,6 +57,17 @@ var objects;
             }
             this.planeFlash.x = this.x;
             this.planeFlash.y = this.y;
+        };
+        Plane.prototype.BulletFire = function () {
+            this._bulletSpawn = new math.Vec2(this.x, this.y - 2);
+            if (this.alpha == 1) {
+                if (managers.Game.keyboardManager.fire) {
+                    var bullet = new objects.Bullet();
+                    bullet.x = this._bulletSpawn.x;
+                    bullet.y = this._bulletSpawn.y;
+                    managers.Game.currentSceneObject.addChild(bullet);
+                }
+            }
         };
         // check to see if some boundary has been passed
         Plane.prototype.CheckBounds = function () {

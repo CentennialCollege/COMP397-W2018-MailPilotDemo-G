@@ -12,6 +12,7 @@
 /// <reference path="../../Scripts/managers/collision.ts"/>
 /// <reference path="../../Scripts/objects/button.ts"/>
 /// <reference path="../../Scripts/objects/ocean.ts"/>
+/// <reference path="../../Scripts/objects/bullet.ts"/>
 /// <reference path="../../Scripts/objects/plane.ts"/>
 /// <reference path="../../Scripts/objects/planeflash.ts"/>
 /// <reference path="../../Scripts/objects/coin.ts"/>
